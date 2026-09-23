@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { EXPERIMENTS, VISUAL_SKETCHES } from "@/data/experiments";
 import { ArrowUpRight } from "lucide-react";
 
+import SafeImage from "@/components/SafeImage";
+
 export const metadata: Metadata = {
   title: "Experiments — Prathamesh Patil",
   description:
@@ -27,23 +29,39 @@ export default function ExperimentsPage() {
               const isExternal = exp.linkHref.startsWith("http");
               return (
                 <article key={idx} className="exp-card">
-                  <div className="exp-thumb">
-                    <img src={exp.img} alt={exp.title} />
-                  </div>
+                  <a
+                    href={exp.linkHref}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                    className="exp-thumb"
+                  >
+                    <SafeImage
+                      src={exp.img}
+                      alt={exp.title}
+                      loading="lazy"
+                      fallbackSrc="https://via.placeholder.com/600x340/181D27/FFFFFF?text=Relaysis.com"
+                    />
+                  </a>
                   <div className="exp-body">
-                    <h3>{exp.title}</h3>
+                    <h3>
+                      <a
+                        href={exp.linkHref}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
+                        {exp.title}
+                      </a>
+                    </h3>
                     <p>{exp.desc}</p>
                     <a
                       href={exp.linkHref}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
                       className="exp-live-btn"
-                      style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
                     >
-                      {exp.linkText}{" "}
-                      <span className="title-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <ArrowUpRight size={16} strokeWidth={2} />
-                      </span>
+                      {exp.linkText}
+                      <ArrowUpRight size={16} strokeWidth={2} />
                     </a>
                   </div>
                 </article>
@@ -65,7 +83,12 @@ export default function ExperimentsPage() {
           <div className="image-grid">
             {VISUAL_SKETCHES.map((sketch, idx) => (
               <div key={idx} className="image-card">
-                <img src={sketch.img} alt={sketch.title} />
+                <SafeImage
+                  src={sketch.img}
+                  alt={sketch.title}
+                  loading="lazy"
+                  fallbackSrc="https://via.placeholder.com/300x380/E9EAEB/181D27?text=Sketch"
+                />
               </div>
             ))}
           </div>

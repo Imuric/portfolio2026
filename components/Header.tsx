@@ -24,7 +24,6 @@ export default function Header() {
           aria-controls="primaryNav"
           aria-label="Toggle navigation"
           onClick={toggleNav}
-          style={{ display: "inline-flex", alignItems: "center", justifyContent: "center" }}
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
