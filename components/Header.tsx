@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Download, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +54,18 @@ export default function Header() {
             Experiments
           </Link>
           <a
-            href="/assets/Prathamesh_Patil_Product_Designer_Resume.pdf"
+            href="https://writing.imuric.com"
+            className="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeNav}
+            style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}
+          >
+            Writings
+            <ArrowUpRight size={14} />
+          </a>
+          <a
+            href="https://resume.imuric.com"
             className="btn btn-primary btn-sm"
             id="resumeBtn"
             target="_blank"
@@ -63,7 +74,7 @@ export default function Header() {
             style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
           >
             Resume
-            <Download size={14} strokeWidth={2} />
+            <ArrowUpRight size={14} strokeWidth={2} />
           </a>
         </nav>
       </div>

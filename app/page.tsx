@@ -112,11 +112,83 @@ export default function HomePage() {
               A selection of work across 0→1 builds and scaled systems, solving complex problems with measurable impact.
             </p>
           </header>
-          <div className="work-list" id="workList">
-            {PROJECTS.map((project, index) => (
-              <ProjectCard key={project.slug} project={project} index={index} />
-            ))}
-          </div>
+
+          {/* 
+            Projects are preserved in code for future use. 
+            Toggle SHOW_PROJECTS to true to re-enable the case studies list.
+          */}
+          {(() => {
+            const SHOW_PROJECTS = false;
+            return SHOW_PROJECTS ? (
+              <div className="work-list" id="workList">
+                {PROJECTS.map((project, index) => (
+                  <ProjectCard key={project.slug} project={project} index={index} />
+                ))}
+              </div>
+            ) : (
+              <div
+                className="updating-soon-card"
+                style={{
+                  background: "var(--bg-soft)",
+                  border: "1px dashed var(--line-2)",
+                  borderRadius: "var(--radius)",
+                  padding: "56px 24px",
+                  textAlign: "center",
+                  maxWidth: "640px",
+                  margin: "0 auto",
+                }}
+              >
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    background: "rgba(255, 168, 97, 0.15)",
+                    color: "var(--accent-2)",
+                    padding: "6px 14px",
+                    borderRadius: "999px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <span
+                    className="dot"
+                    style={{
+                      width: "8px",
+                      height: "8px",
+                      borderRadius: "50%",
+                      background: "currentColor",
+                    }}
+                  ></span>
+                  In Development
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--head-font)",
+                    fontSize: "26px",
+                    fontWeight: "700",
+                    margin: "0 0 10px",
+                    color: "var(--ink)",
+                  }}
+                >
+                  Updating Soon
+                </h3>
+                <p
+                  style={{
+                    color: "var(--muted)",
+                    margin: "0 auto",
+                    fontSize: "15px",
+                    lineHeight: "1.6",
+                    maxWidth: "480px",
+                  }}
+                >
+                  Case studies and in-depth design breakdowns are currently being updated.
+                  Check back soon for the latest work!
+                </p>
+              </div>
+            );
+          })()}
         </div>
       </section>
 

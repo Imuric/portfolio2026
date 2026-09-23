@@ -11,10 +11,7 @@ export default function Footer() {
   return (
     <>
       <section className="status">
-        <div className="container status-inner">
-          <span className="avail-chip avail-chip-lg">
-            <span className="dot"></span> Available for work
-          </span>
+        <div className="container status-inner" style={{ justifyContent: "flex-end" }}>
           <button className="back-top" id="backTop" onClick={scrollToTop}>
             Back to top{" "}
             <span className="back-arrow">

@@ -136,9 +136,11 @@
           <a href="${base}index.html#work" class="nav-link ${page==='home'?'is-active':''}">Projects</a>
           <a href="${base}about.html" class="nav-link ${page==='about'?'is-active':''}">About</a>
           <a href="${base}experiments.html" class="nav-link ${page==='experiments'?'is-active':''}">Experiments</a>
-          <a href="${base}assets/Prathamesh_Patil_Product_Designer_Resume.pdf" class="btn btn-primary btn-sm" id="resumeBtn" target="_blank">
-            Resume
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <a href="https://writing.imuric.com" class="nav-link" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px">
+            Writings <span style="font-size:12px">↗</span>
+          </a>
+          <a href="https://resume.imuric.com" class="btn btn-primary btn-sm" id="resumeBtn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px">
+            Resume <span style="font-size:12px">↗</span>
           </a>
         </nav>
       </div>`;
@@ -148,8 +150,7 @@
     const ft = el("div");
     ft.innerHTML = `
       <section class="status">
-        <div class="container status-inner">
-          <span class="avail-chip avail-chip-lg"><span class="dot"></span> Available for work</span>
+        <div class="container status-inner" style="justify-content: flex-end">
           <button class="back-top" id="backTop">Back to top <span class="back-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></span></button>
         </div>
       </section>
@@ -182,7 +183,7 @@
               </div>
             </div>
           </div>
-          <div className="footer-bottom">
+          <div class="footer-bottom">
             <p>Made with <span class="heart">♥</span> by Prathamesh</p>
           </div>
         </div>
@@ -209,32 +210,20 @@
   }
 
   // ---------- RENDERING ----------
-  const CS_PAGE_URLS = { famli: "famli.html", otc: "otc-seller-portal.html", phlebo: "phlebo.html", thyro: "tc-diagnostics.html" };
-
   function renderWork() {
     const list = document.getElementById("workList");
     if (!list) return;
-    list.innerHTML = "";
-    PROJECTS.forEach((p, i) => {
-      const url = CS_PAGE_URLS[p.id] || "#";
-      const card = el("article", "work-card" + (i % 2 ? " reverse" : ""));
-      card.innerHTML = `
-        <a href="${url}" class="work-thumb ${p.thumbClass}">
-          <img src="${p.img}" alt="${p.title}" loading="lazy"/>
-        </a>
-        <div class="work-body">
-          <h3 class="work-title"><a href="${url}" class="work-title-link">${p.title} <span class="title-arrow">→</span></a></h3>
-          <p class="work-desc">${p.desc}</p>
-          <div class="tag-row">
-            ${p.tags.map(t => `<span class="tag ${t.c || ""}">${t.l}</span>`).join("")}
-          </div>
-          <p class="outcomes-label">Key outcomes</p>
-          <div class="outcomes">
-            ${p.outcomes.map(o => `<div class="outcome"><span class="outcome-val">${o.v}</span><span class="outcome-lbl">${o.l}</span></div>`).join("")}
-          </div>
-        </div>`;
-      list.appendChild(card);
-    });
+    list.innerHTML = `
+      <div class="updating-soon-card" style="background:var(--bg-soft);border:1px dashed var(--line-2);border-radius:var(--radius);padding:56px 24px;text-align:center;max-width:640px;margin:0 auto">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,168,97,0.15);color:var(--accent-2);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:16px">
+          <span class="dot" style="width:8px;height:8px;border-radius:50%;background:currentColor"></span>
+          In Development
+        </div>
+        <h3 style="font-family:var(--head-font);font-size:26px;font-weight:700;margin:0 0 10px;color:var(--ink)">Updating Soon</h3>
+        <p style="color:var(--muted);margin:0 auto;font-size:15px;line-height:1.6;max-width:480px">
+          Case studies and in-depth design breakdowns are currently being updated. Check back soon for the latest work!
+        </p>
+      </div>`;
   }
 
   function renderLeaders() {
