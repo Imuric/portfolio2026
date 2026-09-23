@@ -57,7 +57,7 @@ This project is a complete architectural modernization of a clean HTML/CSS/JS po
 ## 🗂️ Project Structure
 
 ```text
-portfolio-deepan-vora/
+portfolio2026/
 ├── app/
 │   ├── about/
 │   │   └── page.tsx            # About page (Bio, Logos, Process, Beyond Work)
@@ -173,3 +173,4 @@ Because `output: 'export'` is configured in `next.config.mjs`, you can upload th
 
 - **Designed & Developed by**: [Prathamesh Patil](https://github.com/Imuric)
 - **Icons**: [Lucide Icons](https://lucide.dev/)
+
