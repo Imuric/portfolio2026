@@ -1,56 +1,56 @@
 # Prathamesh Patil — UI/UX Designer Portfolio
 
-A modern, production-grade portfolio website built with **Next.js (App Router)**, **TypeScript**, and **Lucide Icons**, featuring dynamic slug-based case study routing and full **Static Site Generation (SSG)** for ultra-fast performance.
+A modern, production-grade portfolio website built with the latest stable releases of **Next.js (App Router)**, **React 19**, **TypeScript**, and **Lucide Icons**, featuring a clean modular architecture and full **Static Site Generation (SSG)** for ultra-fast performance.
 
 ---
 
 ## 🌟 Overview
 
-This project is a complete architectural modernization of a clean HTML/CSS/JS portfolio into a scalable **Next.js App Router** application. It preserves 100% of the custom design system, subtle animations, and responsive layouts while replacing legacy inline scripts and static HTML pages with:
-- Dynamic slug-based routing (`/projects/[slug]`)
-- Centralized TypeScript data models
-- Componentized UI architecture
+This project is a modern, high-performance portfolio application designed to showcase product design, leadership, experiments, and writings. It preserves 100% of the custom design system, fluid typography, subtle animations, and responsive layouts while providing:
+- Component-driven UI architecture
 - Standardized **Lucide Icons**
+- External integrations for **Resume** (`resume.imuric.com`) and **Writings** (`writing.imuric.com`)
+- Experiments showcase featuring **Relaysis.com**
+- Extensible dynamic routing system for future case studies
 - Zero-runtime static export (`output: 'export'`) optimized for **Cloudflare Workers Static Assets**, **Vercel**, and **GitHub Pages**.
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Modern Tech Stack (Latest Stable)
 
-| Technology | Purpose |
-| :--- | :--- |
-| **[Next.js](https://nextjs.org/)** (App Router) | React Framework with SSG pre-rendering |
-| **[TypeScript](https://www.typescriptlang.org/)** | Type safety for data models, props, and components |
-| **[React](https://react.dev/)** | Component-driven UI development |
-| **[Lucide Icons](https://lucide.dev/)** (`lucide-react`) | Clean, accessible vector UI icons |
-| **[Next Font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)** | Zero-layout-shift Google Fonts (`Bricolage Grotesque` & `Inter`) |
-| **[Cloudflare Workers](https://developers.cloudflare.com/workers/)** | Edge hosting via Wrangler Static Assets |
-| **[pnpm](https://pnpm.io/)** | Fast, disk-space-efficient package manager |
+| Technology | Version | Purpose |
+| :--- | :--- | :--- |
+| **[Next.js](https://nextjs.org/)** (App Router) | `^16.3.6` | Modern React framework with full SSG pre-rendering |
+| **[React](https://react.dev/)** | `^19.3.0` | Latest concurrent component-driven UI library |
+| **[React DOM](https://react.dev/)** | `^19.3.0` | React DOM renderer |
+| **[TypeScript](https://www.typescriptlang.org/)** | `^5.8.0` | Strict type safety across data models and components |
+| **[Lucide Icons](https://lucide.dev/)** (`lucide-react`) | `^1.47.0` | Clean, accessible vector UI icons |
+| **[Next Font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)** | Built-in | Zero-layout-shift Google Fonts (`Bricolage Grotesque` & `Inter`) |
+| **[Cloudflare Workers](https://developers.cloudflare.com/workers/)** | Latest | Edge hosting via Wrangler Static Assets |
+| **[pnpm](https://pnpm.io/)** | `^11.x` | High-efficiency package manager |
 
 ---
 
-## ✨ Key Features
+## ✨ Current Pages & Features
 
-- **⚡ Static Site Generation (SSG)**: Pre-renders all 15 routes (`/`, `/about`, `/experiments`, and case study slugs) at build time into pure static HTML/CSS/JS (`out/` folder).
-- **🧭 Dynamic Case Studies (`/projects/[slug]`)**:
-  - Centralized project catalog in `data/projects.ts`.
-  - Statically generated via `generateStaticParams()`.
-  - Dynamic SEO metadata (titles and descriptions) generated per project via `generateMetadata()`.
-  - Supports URL aliases (e.g. `/projects/famli-app` redirects/maps to `/projects/famli`).
-- **🎨 Design System & Styling**:
-  - 100% preserved visual identity ported to `app/globals.css`.
-  - Bootstrap-style 1140px fluid container and 12-column grid.
-  - Light & Dark mode CSS variable support.
-  - Infinite logo marquee and skills marquee animations.
-  - Scroll-triggered entrance animations via `ScrollReveal` (`IntersectionObserver`).
-- **📱 Responsive & Interactive Components**:
-  - Sticky navigation header with mobile drawer toggle (`Header.tsx`).
-  - Interactive "Beyond Work" gallery slider with touch/button controls and dot indicators (`BeyondSlider.tsx`).
-  - Floating back-to-top button with smooth scrolling (`BackToTopFloat.tsx`).
-  - Graceful image fallback loader (`SafeImage.tsx`).
-- **🛡️ Standardized Icons**:
-  - Replaced inline text placeholders and inconsistent SVGs with **Lucide Icons** across header, footer, process steps, and buttons.
-  - Custom Lucide-compatible vector icons for LinkedIn, Twitter / X, and Instagram.
+- **🏠 Home Page (`/`)**:
+  - Hero introduction with bio and social links.
+  - Worked-with company logos marquee.
+  - **Selected Work**: Currently displaying an **"Updating Soon" (In Development)** block while new case studies are prepared. (Full case study architecture and dynamic routes remain preserved in code for future activation).
+  - Leadership & Impact highlights.
+  - Animated 3-column vertical testimonial marquee.
+  - Design skills marquee.
+- **👤 About Page (`/about`)**:
+  - Background story and core design expertise pills.
+  - 3-step structured design methodology (Discover, Define, Deliver) with Lucide icons.
+  - Interactive "Beyond Work" gallery slider with touch/button controls.
+- **🧪 Experiments Page (`/experiments`)**:
+  - Features **[Relaysis.com](https://relaysis.com)** — A design-to-code bridge with Token Forge for generating semantic tokens and synchronizing variables between Figma and code.
+  - Visual sketches showcase.
+- **✍️ Writings (External Redirect)**:
+  - Direct navigation link to [writing.imuric.com](https://writing.imuric.com).
+- **📄 Resume (External Redirect)**:
+  - Header CTA button linking directly to [resume.imuric.com](https://resume.imuric.com).
 
 ---
 
@@ -60,28 +60,28 @@ This project is a complete architectural modernization of a clean HTML/CSS/JS po
 portfolio2026/
 ├── app/
 │   ├── about/
-│   │   └── page.tsx            # About page (Bio, Logos, Process, Beyond Work)
+│   │   └── page.tsx            # About page (Bio, Process, Beyond Work)
 │   ├── experiments/
-│   │   └── page.tsx            # Playground experiments & visual sketches
+│   │   └── page.tsx            # Playground experiments (Relaysis.com) & sketches
 │   ├── projects/
 │   │   └── [slug]/
-│   │       └── page.tsx        # Dynamic Project Case Study page (SSG)
+│   │       └── page.tsx        # Extensible dynamic case study route (SSG)
 │   ├── globals.css             # Complete design system styles & animations
 │   ├── layout.tsx              # Root layout (Fonts, Header, Footer, Metadata)
 │   └── page.tsx                # Homepage (Hero, Logos, Work, Leadership, Testimonials)
 ├── components/
 │   ├── BackToTopFloat.tsx      # Floating scroll-to-top trigger button
 │   ├── BeyondSlider.tsx        # Interactive gallery slider for About page
-│   ├── Footer.tsx              # Footer with status chip, contact info, and socials
-│   ├── Header.tsx              # Header nav with mobile drawer and resume link
-│   ├── ProjectCard.tsx         # Reusable project card linking to /projects/[slug]
+│   ├── Footer.tsx              # Footer with contact info and socials
+│   ├── Header.tsx              # Header nav with Resume and Writings redirects
+│   ├── ProjectCard.tsx         # Reusable project card component
 │   ├── SafeImage.tsx           # Robust image component with fallback support
 │   ├── ScrollReveal.tsx        # IntersectionObserver scroll reveal handler
 │   └── SocialIcons.tsx         # Lucide-styled brand icons (LinkedIn, X, Instagram)
 ├── data/
-│   ├── experiments.ts          # Playground experiments & visual sketches data
+│   ├── experiments.ts          # Experiments data (Relaysis.com) & sketches
 │   ├── leadership.ts           # Leadership & Impact cards data
-│   ├── projects.ts             # Comprehensive project case study data & slug helpers
+│   ├── projects.ts             # Centralized project catalog (for future case studies)
 │   ├── testimonials.ts         # Testimonials and client review data
 │   └── types.ts                # TypeScript interfaces and type definitions
 ├── public/
@@ -91,7 +91,7 @@ portfolio2026/
 │   ├── favicon-32x32.png       # Standard favicon
 │   └── favicon.ico             # Root favicon
 ├── next.config.mjs             # Next.js configuration (output: 'export')
-├── package.json                # Project dependencies and npm scripts
+├── package.json                # Project dependencies (Next 16, React 19)
 ├── tsconfig.json               # TypeScript configuration with @/* aliases
 ├── wrangler.jsonc              # Cloudflare Workers Static Assets configuration
 └── README.md                   # Project documentation
@@ -99,23 +99,10 @@ portfolio2026/
 
 ---
 
-## 🔗 Project Slugs & Routes
-
-Every project is rendered dynamically from `data/projects.ts` using Next.js App Router dynamic parameters:
-
-| Project | Primary Slug / URL | Aliases Supported |
-| :--- | :--- | :--- |
-| **Famli App** | `/projects/famli` | `/projects/famli-app` |
-| **OTC Marketplace Seller Portal** | `/projects/otc-seller-portal` | `/projects/otc` |
-| **Phlebotomist App** | `/projects/phlebotomist-app` | `/projects/phlebo` |
-| **Thyrocare Diagnostics Portal** | `/projects/tc-diagnostics` | `/projects/thyro`, `/projects/thyrocare-diagnostics` |
-
----
-
 ## 🛠️ Run & Development Commands
 
 ### 1. Prerequisites
-- **Node.js**: v18.17 or higher (Node 20+ recommended)
+- **Node.js**: v20 or higher (Node 20, 22, or 24 LTS)
 - **Package Manager**: `pnpm` (or `npm` / `yarn`)
 
 ### 2. Install Dependencies
@@ -130,7 +117,7 @@ pnpm dev
 ```
 
 ### 4. Build for Production (Static Export)
-Compiles TypeScript, validates routes, and statically generates all 15 pages into the `./out` directory:
+Compiles TypeScript, validates routes, and statically generates all pages into the `./out` directory:
 ```bash
 pnpm build
 ```
@@ -162,7 +149,7 @@ npx wrangler deploy
 ### Vercel
 1. Push your repository to GitHub.
 2. Import the repository into [Vercel](https://vercel.com).
-3. Vercel automatically detects Next.js and deploys without additional configuration.
+3. Vercel automatically detects Next.js and deploys with optimal caching.
 
 ### GitHub Pages / Netlify / S3
 Because `output: 'export'` is configured in `next.config.mjs`, you can upload the contents of the `./out` directory to any static hosting provider.
@@ -173,4 +160,3 @@ Because `output: 'export'` is configured in `next.config.mjs`, you can upload th
 
 - **Designed & Developed by**: [Prathamesh Patil](https://github.com/Imuric)
 - **Icons**: [Lucide Icons](https://lucide.dev/)
-
