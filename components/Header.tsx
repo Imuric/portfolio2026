@@ -62,7 +62,6 @@ export default function Header() {
             style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}
           >
             Writings
-            <ArrowUpRight size={14} />
           </a>
           <a
             href="https://resume.imuric.com"

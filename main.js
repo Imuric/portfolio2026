@@ -137,7 +137,7 @@
           <a href="${base}about.html" class="nav-link ${page==='about'?'is-active':''}">About</a>
           <a href="${base}experiments.html" class="nav-link ${page==='experiments'?'is-active':''}">Experiments</a>
           <a href="https://writing.imuric.com" class="nav-link" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px">
-            Writings <span style="font-size:12px">↗</span>
+            Writings <span style="font-size:12px"></span>
           </a>
           <a href="https://resume.imuric.com" class="btn btn-primary btn-sm" id="resumeBtn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px">
             Resume <span style="font-size:12px">↗</span>
