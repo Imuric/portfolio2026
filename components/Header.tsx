@@ -53,7 +53,7 @@ export default function Header() {
             Experiments
           </Link>
           <a
-            href="https://writing.imuric.com"
+            href="https://blog.imuric.com"
             className="nav-link"
             target="_blank"
             rel="noopener noreferrer"

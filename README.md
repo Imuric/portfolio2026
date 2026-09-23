@@ -9,7 +9,7 @@ A modern, production-grade portfolio website built with the latest stable releas
 This project is a modern, high-performance portfolio application designed to showcase product design, leadership, experiments, and writings. It preserves 100% of the custom design system, fluid typography, subtle animations, and responsive layouts while providing:
 - Component-driven UI architecture
 - Standardized **Lucide Icons**
-- External integrations for **Resume** (`resume.imuric.com`) and **Writings** (`writing.imuric.com`)
+- External integrations for **Resume** (`resume.imuric.com`) and **Writings** (`blog.imuric.com`)
 - Experiments showcase featuring **Relaysis.com**
 - Extensible dynamic routing system for future case studies
 - Zero-runtime static export (`output: 'export'`) optimized for **Cloudflare Workers Static Assets**, **Vercel**, and **GitHub Pages**.
@@ -48,7 +48,7 @@ This project is a modern, high-performance portfolio application designed to sho
   - Features **[Relaysis.com](https://relaysis.com)** — A design-to-code bridge with Token Forge for generating semantic tokens and synchronizing variables between Figma and code.
   - Visual sketches showcase.
 - **✍️ Writings (External Redirect)**:
-  - Direct navigation link to [writing.imuric.com](https://writing.imuric.com).
+  - Direct navigation link to [blog.imuric.com](https://blog.imuric.com).
 - **📄 Resume (External Redirect)**:
   - Header CTA button linking directly to [resume.imuric.com](https://resume.imuric.com).
 
