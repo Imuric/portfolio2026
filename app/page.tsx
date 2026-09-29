@@ -18,11 +18,13 @@ const LEADER_ICONS = {
 
 export default function HomePage() {
   const SHOW_PROJECTS = false;
-  const testimonialCols = [
-    TESTIMONIALS.slice(0, 2),
-    TESTIMONIALS.slice(2, 4),
-    TESTIMONIALS.slice(4, 6),
-  ];
+
+  // Dynamically distribute all testimonials across 3 columns so none are excluded
+  const columnCount = 3;
+  const testimonialCols = Array.from({ length: columnCount }, () => [] as typeof TESTIMONIALS);
+  TESTIMONIALS.forEach((testimonial, index) => {
+    testimonialCols[index % columnCount].push(testimonial);
+  });
 
   return (
     <>
@@ -196,12 +198,14 @@ export default function HomePage() {
               <div key={colIdx} className="testi-col">
                 <div
                   className="testi-track"
-                  style={{ ["--dur" as string]: `${15 + colIdx * 2}s` }}
+                  style={{
+                    ["--dur" as string]: `${Math.max(16, col.length * (8 + colIdx * 1.5))}s`,
+                  }}
                 >
                   {[0, 1].map((iter) => (
                     <div key={iter} style={{ display: "contents" }}>
                       {col.map((t, tIdx) => (
-                        <article key={`${iter}-${tIdx}`} className="testi">
+                        <article key={`${iter}-${colIdx}-${tIdx}`} className="testi">
                           <p className="testi-quote">&ldquo;{t.q}&rdquo;</p>
                           <div className="testi-author">
                             <div className="testi-avatar">

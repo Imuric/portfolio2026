@@ -915,6 +915,10 @@ body.dark .tag.blue {
   will-change: transform;
 }
 
+.testi-grid:hover .testi-track {
+  animation-play-state: paused;
+}
+
 @keyframes scrollUp {
   0% {
     transform: translateY(0)
@@ -2071,7 +2075,8 @@ body.dark .exp-live-btn:hover {
   }
 
   .marquee-track,
-  .logo-marquee-track {
+  .logo-marquee-track,
+  .testi-track {
     animation: none
   }
 }
