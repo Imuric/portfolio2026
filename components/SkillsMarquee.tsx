@@ -19,25 +19,40 @@ export default function SkillsMarquee({
   className = "",
 }: SkillsMarqueeProps) {
   const sectionClass = `marquee ${className}`.trim();
+  // Repeat skills within each group so each group is wide enough for any screen
+  const repeatedSkills = [...skills, ...skills, ...skills];
 
   return (
     <section className={sectionClass} aria-hidden="true">
       <div className="marquee-track">
-        {[0, 1].map((setIndex) => (
-          <React.Fragment key={setIndex}>
-            {skills.map((skill, index) => (
-              <React.Fragment key={`${setIndex}-${index}`}>
-                <span>{skill}</span>
-                <img
-                  src="/assets/home/star.png"
-                  width="56"
-                  height="56"
-                  alt="star"
-                />
-              </React.Fragment>
-            ))}
-          </React.Fragment>
-        ))}
+        {/* Primary Group */}
+        <div className="marquee-group">
+          {repeatedSkills.map((skill, index) => (
+            <React.Fragment key={`skill-g1-${index}`}>
+              <span>{skill}</span>
+              <img
+                src="/assets/home/star.png"
+                width="56"
+                height="56"
+                alt="star"
+              />
+            </React.Fragment>
+          ))}
+        </div>
+        {/* Duplicate Group for seamless infinite loop */}
+        <div className="marquee-group" aria-hidden="true">
+          {repeatedSkills.map((skill, index) => (
+            <React.Fragment key={`skill-g2-${index}`}>
+              <span>{skill}</span>
+              <img
+                src="/assets/home/star.png"
+                width="56"
+                height="56"
+                alt="star"
+              />
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </section>
   );
