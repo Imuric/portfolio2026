@@ -106,6 +106,20 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       )}
 
+      {/* ── Cover Image (Hero Banner) ── */}
+      {article.coverImage && (
+        <figure className="article-figure article-cover-figure">
+          <div className="article-media-wrapper">
+            <SafeImage
+              src={article.coverImage}
+              alt={article.title}
+              className="article-media-img"
+              fallbackSrc="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80"
+            />
+          </div>
+        </figure>
+      )}
+
       {/* ── Article Body (Medium Reading Layout) ── */}
       <div className="article-prose">
         {article.sections?.map((section, sIdx) => (
@@ -141,27 +155,55 @@ export default async function ArticlePage({ params }: Props) {
             )}
 
             {section.image && (
-              <figure style={{ margin: "40px 0" }}>
-                <SafeImage
-                  src={section.image.src}
-                  alt={section.image.alt || ""}
-                  style={{
-                    width: "100%",
-                    borderRadius: "16px",
-                    border: "1px solid var(--line)",
-                  }}
-                  fallbackSrc="https://via.placeholder.com/740x400"
-                />
+              <figure className="article-figure">
+                <div className="article-media-wrapper">
+                  <SafeImage
+                    src={section.image.src}
+                    alt={section.image.alt || ""}
+                    className="article-media-img"
+                    fallbackSrc="https://via.placeholder.com/740x400"
+                  />
+                  {section.image.isGif && (
+                    <span className="article-gif-badge">GIF</span>
+                  )}
+                </div>
                 {section.image.caption && (
-                  <figcaption
-                    style={{
-                      textAlign: "center",
-                      fontSize: "13px",
-                      color: "var(--muted)",
-                      marginTop: "10px",
-                    }}
-                  >
+                  <figcaption className="article-caption">
                     {section.image.caption}
+                  </figcaption>
+                )}
+              </figure>
+            )}
+
+            {section.video && (
+              <figure className="article-figure">
+                <div className="article-video-wrapper">
+                  {section.video.isEmbed ? (
+                    <iframe
+                      src={section.video.src}
+                      className="article-embed-iframe"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title={section.video.caption || "Embedded video"}
+                    />
+                  ) : (
+                    <video
+                      src={section.video.src}
+                      poster={section.video.poster}
+                      controls={section.video.controls !== false}
+                      autoPlay={section.video.autoPlay}
+                      loop={section.video.loop}
+                      muted={section.video.autoPlay ? true : undefined}
+                      playsInline
+                      className="article-video-player"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                </div>
+                {section.video.caption && (
+                  <figcaption className="article-caption">
+                    {section.video.caption}
                   </figcaption>
                 )}
               </figure>

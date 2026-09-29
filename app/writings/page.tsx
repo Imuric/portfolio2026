@@ -100,47 +100,62 @@ export default function WritingsPage() {
                 href={`/writings/${article.slug}`}
                 className={`writing-card ${isFeatured ? "is-featured" : ""}`}
               >
-                <div className="writing-meta">
-                  <div className="writing-author-mini">
-                    <SafeImage
-                      src={author.avatar}
-                      alt={author.name}
-                      className="writing-author-img"
-                      fallbackText="P"
-                    />
-                    <span>{author.name}</span>
-                  </div>
-                  <span>·</span>
-                  <span>{article.publishedAt}</span>
-                  <span>·</span>
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
-                    <Clock size={12} strokeWidth={2} />
-                    {article.readTime}
-                  </span>
-                  {article.status === "coming_soon" && (
-                    <span className="writing-badge">Coming Soon</span>
-                  )}
-                  {article.status === "published" && (
-                    <span className="writing-badge published">Published</span>
-                  )}
-                </div>
-
-                <h2 className="writing-title">{article.title}</h2>
-                <p className="writing-sub">{article.subtitle}</p>
-
-                <div className="writing-footer">
-                  <div className="writing-tags">
-                    {article.tags.map((tag, idx) => (
-                      <span key={idx} className="tag">
-                        {tag}
+                <div className="writing-card-inner">
+                  <div className="writing-card-main">
+                    <div className="writing-meta">
+                      <div className="writing-author-mini">
+                        <SafeImage
+                          src={author.avatar}
+                          alt={author.name}
+                          className="writing-author-img"
+                          fallbackText="P"
+                        />
+                        <span>{author.name}</span>
+                      </div>
+                      <span>·</span>
+                      <span>{article.publishedAt}</span>
+                      <span>·</span>
+                      <span style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                        <Clock size={12} strokeWidth={2} />
+                        {article.readTime}
                       </span>
-                    ))}
+                      {article.status === "coming_soon" && (
+                        <span className="writing-badge">Coming Soon</span>
+                      )}
+                      {article.status === "published" && (
+                        <span className="writing-badge published">Published</span>
+                      )}
+                    </div>
+
+                    <h2 className="writing-title">{article.title}</h2>
+                    <p className="writing-sub">{article.subtitle}</p>
+
+                    <div className="writing-footer">
+                      <div className="writing-tags">
+                        {article.tags.map((tag, idx) => (
+                          <span key={idx} className="tag">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <span className="writing-action">
+                        Read Article
+                        <ArrowRight size={14} strokeWidth={2} />
+                      </span>
+                    </div>
                   </div>
 
-                  <span className="writing-action">
-                    Read Article
-                    <ArrowRight size={14} strokeWidth={2} />
-                  </span>
+                  {article.coverImage && (
+                    <div className="writing-card-thumb">
+                      <SafeImage
+                        src={article.coverImage}
+                        alt={article.title}
+                        className="writing-card-thumb-img"
+                        fallbackSrc="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=320&q=80"
+                      />
+                    </div>
+                  )}
                 </div>
               </Link>
             );

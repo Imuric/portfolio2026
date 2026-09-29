@@ -12,6 +12,8 @@ export const ARTICLES: WritingArticle[] = [
     tags: ["Design Systems", "UI/UX", "Engineering"],
     status: "coming_soon",
     featured: true,
+    coverImage:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Prathamesh Patil",
       role: "UI/UX Designer",
@@ -26,6 +28,11 @@ export const ARTICLES: WritingArticle[] = [
         ],
         quote:
           "A design system is never a finished library. It is an evolving contract between designers, engineers, and product stakeholders.",
+        image: {
+          src: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80",
+          caption: "Figure 1.1: Establishing visual hierarchy and responsive token architecture across viewports.",
+          alt: "Design system architecture illustration",
+        },
       },
       {
         heading: "Tokenizing Intent, Not Just Hex Codes",
@@ -42,6 +49,12 @@ export const ARTICLES: WritingArticle[] = [
           type: "insight",
           text: "Start with semantic tokens for spacing (4px, 8px, 12px, 16px, 24px, 32px) and typography before writing a single line of component code. 80% of visual cohesion comes from consistent rhythm.",
         },
+        image: {
+          src: "https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif",
+          caption: "Animation 1.2: Dynamic token switching demonstrated across dark and light themes (GIF preview).",
+          alt: "Token switching animation demonstration",
+          isGif: true,
+        },
       },
       {
         heading: "Bridging the Figma-to-Code Gap",
@@ -49,6 +62,14 @@ export const ARTICLES: WritingArticle[] = [
           "Alignment isn't achieved by tossing a Figma link over the wall. True velocity happens when components share identical naming, prop structures, and variant states across Figma and React.",
           "When developers inspect a component and see props that directly match their TypeScript interfaces, friction evaporates. Handoff stops being an event and becomes an ongoing dialogue.",
         ],
+        video: {
+          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          caption: "Video 1.3: Real-time component inspection and keyboard accessibility walkthrough.",
+          poster: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+          controls: true,
+          autoPlay: false,
+          loop: true,
+        },
       },
     ],
   },
@@ -63,6 +84,8 @@ export const ARTICLES: WritingArticle[] = [
     tags: ["Product Strategy", "User Research", "0→1"],
     status: "coming_soon",
     featured: false,
+    coverImage:
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Prathamesh Patil",
       role: "UI/UX Designer",
@@ -102,6 +125,8 @@ export const ARTICLES: WritingArticle[] = [
     tags: ["Design Leadership", "Business Impact", "Analytics"],
     status: "coming_soon",
     featured: false,
+    coverImage:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Prathamesh Patil",
       role: "UI/UX Designer",
