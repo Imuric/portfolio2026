@@ -10,7 +10,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     q: "Prathamesh has a strong understanding of UI/UX fundamentals and brings a thoughtful approach to every design problem. I particularly appreciate how he balances visual quality with usability and takes the time to understand the reasoning behind a design decision. He is also easy to collaborate with and receptive to different perspectives.",
     n: "Neev Shirke",
-    r: "Senior UI UX Designer, Locbuzz",
+    r: "Senior UI UX Designer, Locobuzz",
     i: "N",
   },
   {
