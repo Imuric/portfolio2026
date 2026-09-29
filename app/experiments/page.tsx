@@ -3,6 +3,7 @@ import { EXPERIMENTS, VISUAL_SKETCHES } from "@/data/experiments";
 import { ArrowUpRight } from "lucide-react";
 
 import SafeImage from "@/components/SafeImage";
+import SectionHead from "@/components/SectionHead";
 
 export const metadata: Metadata = {
   title: "Experiments — Prathamesh Patil",
@@ -15,14 +16,12 @@ export default function ExperimentsPage() {
     <>
       <section className="exp-section reveal-on-scroll">
         <div className="container">
-          <header className="section-head">
-            <p className="eyebrow">Playground</p>
-            <h1 className="section-title">Experiments &amp; Side Projects</h1>
-            <p className="section-sub">
-              A collection of explorations in vibe-coding, UI experiments, and
-              personal sketches.
-            </p>
-          </header>
+          <SectionHead
+            as="h1"
+            eyebrow="Playground"
+            title="Experiments & Side Projects"
+            subtitle="A collection of explorations in vibe-coding, UI experiments, and personal sketches."
+          />
 
           <div className="exp-list">
             {EXPERIMENTS.map((exp, idx) => {
@@ -73,13 +72,10 @@ export default function ExperimentsPage() {
 
       <section className="section reveal-on-scroll">
         <div className="container">
-          <header className="section-head">
-            <h2 className="section-title">Visual Designs</h2>
-            <p className="section-sub">
-              Playing with forms, colors, and layouts outside of commercial
-              constraints.
-            </p>
-          </header>
+          <SectionHead
+            title="Visual Designs"
+            subtitle="Playing with forms, colors, and layouts outside of commercial constraints."
+          />
           <div className="image-grid">
             {VISUAL_SKETCHES.map((sketch, idx) => (
               <div key={idx} className="image-card">

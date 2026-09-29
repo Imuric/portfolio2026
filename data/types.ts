@@ -94,3 +94,15 @@ export interface VisualSketchItem {
   img: string;
 }
 
+export interface BrandLogo {
+  name: string;
+  src: string;
+}
+
+export interface SocialLink {
+  name: string;
+  href: string;
+  platform: "linkedin" | "twitter" | "instagram";
+  ariaLabel: string;
+}
+

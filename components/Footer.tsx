@@ -1,7 +1,8 @@
 "use client";
 
 import { Mail, Phone, ArrowUp, Heart } from "lucide-react";
-import { LinkedinIcon, TwitterIcon, InstagramIcon } from "./SocialIcons";
+import SafeImage from "./SafeImage";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -25,14 +26,11 @@ export default function Footer() {
           <div className="row footer-row">
             <div className="col-md-6 footer-me">
               <div className="me-card">
-                <img
+                <SafeImage
                   src="/assets/home/hero-portrait.png"
                   alt="Prathamesh Patil"
                   className="me-avatar"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src =
-                      "https://via.placeholder.com/100";
-                  }}
+                  fallbackSrc="https://via.placeholder.com/100"
                 />
                 <div>
                   <p className="me-name">Prathamesh Patil</p>
@@ -62,35 +60,7 @@ export default function Footer() {
                 Feel free to reach out for collaborations or just a friendly
                 hello.
               </p>
-              <div className="connect-socials">
-                <a
-                  href="https://www.linkedin.com/in/deepenvora/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-ic"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedinIcon size={18} />
-                </a>
-                <a
-                  href="https://x.com/deepenv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-ic"
-                  aria-label="Twitter / X"
-                >
-                  <TwitterIcon size={18} />
-                </a>
-                <a
-                  href="https://www.instagram.com/deepenv/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-ic"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon size={18} strokeWidth={2} />
-                </a>
-              </div>
+              <SocialLinks className="connect-socials" />
             </div>
           </div>
           <div className="footer-bottom">

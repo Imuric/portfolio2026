@@ -74,14 +74,20 @@ portfolio2026/
 │   ├── BeyondSlider.tsx        # Interactive gallery slider for About page
 │   ├── Footer.tsx              # Footer with contact info and socials
 │   ├── Header.tsx              # Header nav with Resume and Writings redirects
+│   ├── LogosMarquee.tsx        # Reusable brand logos marquee (used in Home & About)
 │   ├── ProjectCard.tsx         # Reusable project card component
 │   ├── SafeImage.tsx           # Robust image component with fallback support
 │   ├── ScrollReveal.tsx        # IntersectionObserver scroll reveal handler
-│   └── SocialIcons.tsx         # Lucide-styled brand icons (LinkedIn, X, Instagram)
+│   ├── SectionHead.tsx         # Unified section header with title/subtitle/eyebrow
+│   ├── SkillsMarquee.tsx       # Reusable skills ticker marquee
+│   ├── SocialIcons.tsx         # Lucide-styled brand vector icons
+│   └── SocialLinks.tsx         # Centralized social links row (Hero & Footer)
 ├── data/
+│   ├── brands.ts               # Brand partners logo dataset
 │   ├── experiments.ts          # Experiments data (Relaysis.com) & sketches
 │   ├── leadership.ts           # Design & Impact cards data
 │   ├── projects.ts             # Centralized project catalog (for future case studies)
+│   ├── socials.ts              # Social channels links dataset
 │   ├── testimonials.ts         # Testimonials and client review data
 │   └── types.ts                # TypeScript interfaces and type definitions
 ├── public/

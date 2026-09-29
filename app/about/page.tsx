@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import BeyondSlider from "@/components/BeyondSlider";
 import SafeImage from "@/components/SafeImage";
+import LogosMarquee from "@/components/LogosMarquee";
+import SectionHead from "@/components/SectionHead";
 import { Search, Lightbulb, Palette } from "lucide-react";
 import { InstagramIcon } from "@/components/SocialIcons";
+import { SOCIAL_LINKS } from "@/data/socials";
 
 export const metadata: Metadata = {
   title: "About — Prathamesh Patil",
@@ -11,6 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const instagramUrl =
+    SOCIAL_LINKS.find((s) => s.platform === "instagram")?.href ??
+    "https://www.instagram.com/";
   return (
     <>
       <section className="about-hero reveal-on-scroll">
@@ -64,105 +70,15 @@ export default function AboutPage() {
       </section>
 
       {/* ───────── LOGOS (marquee) ───────── */}
-      <section className="logos reveal-on-scroll">
-        <div className="container">
-          <p className="logos-title">I have worked with brands</p>
-        </div>
-        <div className="logo-marquee" aria-hidden="true">
-          <div className="logo-marquee-track">
-            {/* set 1 */}
-            <img
-              src="/assets/home/logos/logo-pharmeasy.png"
-              alt="PharmEasy"
-              className="logo-img"
-            />
-            <img
-              src="/assets/home/logos/logo-spire.png"
-              alt="Spire"
-              className="logo-img"
-            />
-            <img
-              src="/assets/home/logos/logo-flipkart.png"
-              alt="Flipkart"
-              className="logo-img"
-            />
-            <img
-              src="/assets/home/logos/logo-rediff.png"
-              alt="Rediff"
-              className="logo-img"
-            />
-            <img
-              src="/assets/home/logos/logo-sony.png"
-              alt="Sony"
-              className="logo-img"
-            />
-            <img
-              src="/assets/home/logos/logo-toi.png"
-              alt="Times of India"
-              className="logo-img"
-            />
-            <img
-              src="/assets/home/logos/logo-stayzilla.png"
-              alt="Stayzilla"
-              className="logo-img"
-            />
-            {/* set 2 (duplicate for seamless loop) */}
-            <img
-              src="/assets/home/logos/logo-pharmeasy.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-            <img
-              src="/assets/home/logos/logo-spire.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-            <img
-              src="/assets/home/logos/logo-flipkart.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-            <img
-              src="/assets/home/logos/logo-rediff.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-            <img
-              src="/assets/home/logos/logo-sony.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-            <img
-              src="/assets/home/logos/logo-toi.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-            <img
-              src="/assets/home/logos/logo-stayzilla.png"
-              alt=""
-              className="logo-img"
-              aria-hidden="true"
-            />
-          </div>
-        </div>
-      </section>
+      <LogosMarquee className="reveal-on-scroll" />
 
       {/* ───────── PROCESS ───────── */}
       <section className="section process-section reveal-on-scroll">
         <div className="container">
-          <header className="section-head">
-            <h2 className="section-title">My Design Process</h2>
-            <p className="section-sub">
-              A structured approach to navigating ambiguity and delivering
-              high-quality design.
-            </p>
-          </header>
+          <SectionHead
+            title="My Design Process"
+            subtitle="A structured approach to navigating ambiguity and delivering high-quality design."
+          />
           <div className="process-card">
             <div className="row process-row">
               <div className="col-md-4">
@@ -234,7 +150,7 @@ export default function AboutPage() {
           <BeyondSlider />
 
           <a
-            href="https://www.instagram.com/"
+            href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"
