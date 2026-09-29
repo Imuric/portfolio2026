@@ -70,6 +70,7 @@ portfolio2026/
 │   ├── layout.tsx              # Root layout (Fonts, Header, Footer, Metadata)
 │   └── page.tsx                # Homepage (Hero, Logos, Work, Leadership, Testimonials)
 ├── components/
+│   ├── index.ts                # Unified barrel export for all components
 │   ├── BackToTopFloat.tsx      # Floating scroll-to-top trigger button
 │   ├── BeyondSlider.tsx        # Interactive gallery slider for About page
 │   ├── Footer.tsx              # Footer with contact info and socials
@@ -83,6 +84,7 @@ portfolio2026/
 │   ├── SocialIcons.tsx         # Lucide-styled brand vector icons
 │   └── SocialLinks.tsx         # Centralized social links row (Hero & Footer)
 ├── data/
+│   ├── index.ts                # Unified barrel export for all data & types
 │   ├── brands.ts               # Brand partners logo dataset
 │   ├── experiments.ts          # Experiments data (Relaysis.com) & sketches
 │   ├── leadership.ts           # Design & Impact cards data
@@ -90,6 +92,7 @@ portfolio2026/
 │   ├── socials.ts              # Social channels links dataset
 │   ├── testimonials.ts         # Testimonials and client review data
 │   └── types.ts                # TypeScript interfaces and type definitions
+├── legacy/                     # Archived legacy static HTML/JS/CSS files (reference)
 ├── public/
 │   ├── assets/                 # High-res portraits, company logos, resume PDF
 │   ├── apple-touch-icon.png    # iOS touch icon

@@ -1,0 +1,12 @@
+export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
+export { default as LogosMarquee } from "./LogosMarquee";
+export { default as SectionHead } from "./SectionHead";
+export { default as SkillsMarquee } from "./SkillsMarquee";
+export { default as SocialLinks } from "./SocialLinks";
+export { default as ProjectCard } from "./ProjectCard";
+export { default as BeyondSlider } from "./BeyondSlider";
+export { default as BackToTopFloat } from "./BackToTopFloat";
+export { default as SafeImage } from "./SafeImage";
+export { default as ScrollReveal } from "./ScrollReveal";
+export * from "./SocialIcons";

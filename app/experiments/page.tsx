@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { EXPERIMENTS, VISUAL_SKETCHES } from "@/data/experiments";
 import { ArrowUpRight } from "lucide-react";
-
-import SafeImage from "@/components/SafeImage";
-import SectionHead from "@/components/SectionHead";
+import { EXPERIMENTS, VISUAL_SKETCHES } from "@/data";
+import { SafeImage, SectionHead } from "@/components";
 
 export const metadata: Metadata = {
   title: "Experiments — Prathamesh Patil",

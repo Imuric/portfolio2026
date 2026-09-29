@@ -1,12 +1,12 @@
-import { PROJECTS } from "@/data/projects";
-import { LEADERS } from "@/data/leadership";
-import { TESTIMONIALS } from "@/data/testimonials";
-import ProjectCard from "@/components/ProjectCard";
-import SafeImage from "@/components/SafeImage";
-import SocialLinks from "@/components/SocialLinks";
-import LogosMarquee from "@/components/LogosMarquee";
-import SectionHead from "@/components/SectionHead";
-import SkillsMarquee from "@/components/SkillsMarquee";
+import { PROJECTS, LEADERS, TESTIMONIALS } from "@/data";
+import {
+  ProjectCard,
+  SafeImage,
+  SocialLinks,
+  LogosMarquee,
+  SectionHead,
+  SkillsMarquee,
+} from "@/components";
 
 export default function HomePage() {
   const SHOW_PROJECTS = false;

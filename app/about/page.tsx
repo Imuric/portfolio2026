@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import BeyondSlider from "@/components/BeyondSlider";
-import SafeImage from "@/components/SafeImage";
-import LogosMarquee from "@/components/LogosMarquee";
-import SectionHead from "@/components/SectionHead";
 import { Search, Lightbulb, Palette } from "lucide-react";
-import { InstagramIcon } from "@/components/SocialIcons";
-import { SOCIAL_LINKS } from "@/data/socials";
+import {
+  BeyondSlider,
+  SafeImage,
+  LogosMarquee,
+  SectionHead,
+  InstagramIcon,
+} from "@/components";
+import { SOCIAL_LINKS } from "@/data";
 
 export const metadata: Metadata = {
   title: "About — Prathamesh Patil",

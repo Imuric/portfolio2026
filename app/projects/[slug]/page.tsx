@@ -1,9 +1,9 @@
-  import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllProjects, getProjectBySlug } from "@/data/projects";
-import SafeImage from "@/components/SafeImage";
 import { ArrowLeft } from "lucide-react";
+import { getAllProjects, getProjectBySlug } from "@/data";
+import { SafeImage } from "@/components";
 
 interface Props {
   params: Promise<{
