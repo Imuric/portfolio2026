@@ -107,16 +107,30 @@ export interface SocialLink {
   ariaLabel: string;
 }
 
+export interface ArticleMedia {
+  src: string;
+  caption?: string;
+  alt?: string;
+  isGif?: boolean;
+}
+
+export interface ArticleVideo {
+  src: string;
+  caption?: string;
+  poster?: string;
+  autoPlay?: boolean;
+  loop?: boolean;
+  controls?: boolean;
+  isEmbed?: boolean;
+}
+
 export interface ArticleSection {
   heading?: string;
   paragraphs?: string[];
   quote?: string;
   bullets?: string[];
-  image?: {
-    src: string;
-    caption?: string;
-    alt?: string;
-  };
+  image?: ArticleMedia;
+  video?: ArticleVideo;
   callout?: {
     type?: "insight" | "tip" | "takeaway";
     text: string;
