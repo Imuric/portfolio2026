@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2518 1470" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-11116.192917,-11613.66625)">
+        <g transform="matrix(4.166667,0,0,4.166667,10125,10125)">
+            <g transform="matrix(1,0,0,1,379.3013,422.7639)">
+                <path d="M0,145.032L-63.878,145.032L-63.878,100.84L0,100.84C16.874,100.84 28.926,110.08 28.926,122.935C28.926,135.792 16.874,145.032 0,145.032M-63.878,0.001L-11.65,0.001C4.419,0.001 16.07,8.84 16.07,20.892C16.07,32.944 4.419,41.783 -11.65,41.783L-63.878,41.783L-63.878,0.001ZM58.253,65.887C65.147,62.545 71.222,58.27 76.38,53.209L12.969,-57.497L8.405,-65.484L-141.415,-65.484L-141.415,210.516L12.856,210.516C69.101,210.516 109.275,180.386 109.275,136.193C109.275,105.661 90.393,79.547 58.253,65.887" style="fill:rgb(28,28,28);fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g transform="matrix(4.166667,0,0,4.166667,10125,10125)">
+            <g transform="matrix(1,0,0,1,619.5459,633.2803)">
+                <path d="M0,-276L0,-142.202L-29.327,-90.795L-29.327,0L-107.267,0L-107.267,-90.795L-144.227,-155.348L-148.662,-163.061L-153.194,-170.999L-212.411,-274.409L-213.328,-276L-124.14,-276L-68.297,-163.912L-9.24,-276L0,-276Z" style="fill:rgb(243,170,32);fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g transform="matrix(4.166667,0,0,4.166667,10125,10125)">
+            <g transform="matrix(1,0,0,1,842.1133,426.7823)">
+                <path d="M0,136.996L0,206.498L-206.498,206.498L-206.498,-69.502L-128.559,-69.502L-128.559,136.996L0,136.996Z" style="fill:rgb(28,28,28);fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g transform="matrix(4.166667,0,0,4.166667,10125,10125)">
+            <text x="236.403px" y="709.28px" style="font-family:'Metropolis-Medium', 'Metropolis';font-weight:500;font-size:48px;fill:rgb(28,28,28);">BRIGHT YOUNG LEADERS</text>
+        </g>
+    </g>
+</svg>

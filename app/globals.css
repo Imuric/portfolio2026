@@ -526,7 +526,7 @@ body.dark .btn-primary {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: logo-scroll 45s linear infinite;
+  animation: logo-scroll var(--logo-speed, 95s) linear infinite;
 }
 
 .logo-marquee:hover .logo-marquee-track {
