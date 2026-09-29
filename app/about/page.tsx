@@ -26,7 +26,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="col-md-7">
-              <p className="eyebrow">UI UX Designer · Pune, India</p>
+              <p className="eyebrow">Product Designer · Pune, India</p>
               <h1 className="page-title">
                 Design leader at the intersection of{" "}
                 <span className="accent-underline">strategy</span> &amp; craft.
@@ -66,7 +66,7 @@ export default function AboutPage() {
       {/* ───────── LOGOS (marquee) ───────── */}
       <section className="logos reveal-on-scroll">
         <div className="container">
-          <p className="logos-title">I have worked with teams at</p>
+          <p className="logos-title">I have worked with brands</p>
         </div>
         <div className="logo-marquee" aria-hidden="true">
           <div className="logo-marquee-track">

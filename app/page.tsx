@@ -19,7 +19,7 @@ export default function HomePage() {
         <div className="container">
           <div className="row align-center">
             <div className="col-md-7 hero-copy">
-              <p className="eyebrow">UI UX Designer · Pune, India</p>
+              <p className="eyebrow">Product Designer · Pune, India</p>
               <h1 className="hero-title">
                 Hello, I&apos;m <span className="accent-underline">Prathamesh</span>
               </h1>
@@ -79,7 +79,7 @@ export default function HomePage() {
       {/* ───────── LOGOS (marquee) ───────── */}
       <section className="logos">
         <div className="container">
-          <p className="logos-title">I have worked with teams at</p>
+          <p className="logos-title">I have worked with brands</p>
         </div>
         <div className="logo-marquee" aria-hidden="true">
           <div className="logo-marquee-track">

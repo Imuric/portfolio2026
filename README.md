@@ -37,7 +37,7 @@ This project is a modern, high-performance portfolio application designed to sho
   - Hero introduction with bio and social links.
   - Worked-with company logos marquee.
   - **Selected Work**: Currently displaying an **"Updating Soon" (In Development)** block while new case studies are prepared. (Full case study architecture and dynamic routes remain preserved in code for future activation).
-  - Leadership & Impact highlights.
+  - Design & Impact highlights.
   - Animated 3-column vertical testimonial marquee.
   - Design skills marquee.
 - **👤 About Page (`/about`)**:
@@ -46,7 +46,7 @@ This project is a modern, high-performance portfolio application designed to sho
   - Interactive "Beyond Work" gallery slider with touch/button controls.
 - **🧪 Experiments Page (`/experiments`)**:
   - Features **[Relaysis.com](https://relaysis.com)** — A design-to-code bridge with Token Forge for generating semantic tokens and synchronizing variables between Figma and code.
-  - Visual sketches showcase.
+  - Visual Designs showcase.
 - **✍️ Writings (External Redirect)**:
   - Direct navigation link to [blog.imuric.com](https://blog.imuric.com).
 - **📄 Resume (External Redirect)**:
@@ -80,7 +80,7 @@ portfolio2026/
 │   └── SocialIcons.tsx         # Lucide-styled brand icons (LinkedIn, X, Instagram)
 ├── data/
 │   ├── experiments.ts          # Experiments data (Relaysis.com) & sketches
-│   ├── leadership.ts           # Leadership & Impact cards data
+│   ├── leadership.ts           # Design & Impact cards data
 │   ├── projects.ts             # Centralized project catalog (for future case studies)
 │   ├── testimonials.ts         # Testimonials and client review data
 │   └── types.ts                # TypeScript interfaces and type definitions

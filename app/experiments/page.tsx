@@ -74,7 +74,7 @@ export default function ExperimentsPage() {
       <section className="section reveal-on-scroll">
         <div className="container">
           <header className="section-head">
-            <h2 className="section-title">Visual Sketches</h2>
+            <h2 className="section-title">Visual Designs</h2>
             <p className="section-sub">
               Playing with forms, colors, and layouts outside of commercial
               constraints.
