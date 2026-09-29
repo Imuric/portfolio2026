@@ -91,7 +91,8 @@ portfolio2026/
 │   ├── projects.ts             # Centralized project catalog (for future case studies)
 │   ├── socials.ts              # Social channels links dataset
 │   ├── testimonials.ts         # Testimonials and client review data
-│   └── types.ts                # TypeScript interfaces and type definitions
+│   ├── types.ts                # TypeScript interfaces and type definitions
+│   └── writings.ts             # Medium-style writings & essays dataset with template
 ├── public/
 │   ├── assets/                 # High-res portraits, company logos, resume PDF
 │   ├── apple-touch-icon.png    # iOS touch icon

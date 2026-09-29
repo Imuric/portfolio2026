@@ -5,3 +5,4 @@ export * from "./leadership";
 export * from "./testimonials";
 export * from "./experiments";
 export * from "./projects";
+export * from "./writings";

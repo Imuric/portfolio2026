@@ -52,16 +52,13 @@ export default function Header() {
           >
             Experiments
           </Link>
-          <a
-            href="https://blog.imuric.com"
-            className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/writings"
+            className={`nav-link ${pathname.startsWith("/writings") ? "is-active" : ""}`}
             onClick={closeNav}
-            style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}
           >
             Writings
-          </a>
+          </Link>
           <a
             href="https://resume.imuric.com"
             className="btn btn-primary btn-sm"

@@ -107,3 +107,39 @@ export interface SocialLink {
   ariaLabel: string;
 }
 
+export interface ArticleSection {
+  heading?: string;
+  paragraphs?: string[];
+  quote?: string;
+  bullets?: string[];
+  image?: {
+    src: string;
+    caption?: string;
+    alt?: string;
+  };
+  callout?: {
+    type?: "insight" | "tip" | "takeaway";
+    text: string;
+  };
+}
+
+export interface WritingArticle {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  publishedAt: string;
+  readTime: string;
+  tags: string[];
+  status: "published" | "coming_soon";
+  featured?: boolean;
+  coverImage?: string;
+  author?: {
+    name: string;
+    role: string;
+    avatar?: string;
+  };
+  sections?: ArticleSection[];
+}
+
+
