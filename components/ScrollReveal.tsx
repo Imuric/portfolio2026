@@ -7,14 +7,16 @@ export default function ScrollReveal() {
   const pathname = usePathname();
 
   useEffect(() => {
+    let io: IntersectionObserver | null = null;
+
     // Delay slightly to let the DOM settle after route transition
     const timer = setTimeout(() => {
-      const io = new IntersectionObserver(
+      io = new IntersectionObserver(
         (entries) => {
           entries.forEach((en) => {
             if (en.isIntersecting) {
               en.target.classList.add("in");
-              io.unobserve(en.target);
+              io?.unobserve(en.target);
             }
           });
         },
@@ -27,15 +29,14 @@ export default function ScrollReveal() {
 
       elements.forEach((el) => {
         el.classList.add("reveal");
-        io.observe(el);
+        io?.observe(el);
       });
-
-      return () => {
-        io.disconnect();
-      };
     }, 50);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      io?.disconnect();
+    };
   }, [pathname]);
 
   return null;

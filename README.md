@@ -92,7 +92,6 @@ portfolio2026/
 │   ├── socials.ts              # Social channels links dataset
 │   ├── testimonials.ts         # Testimonials and client review data
 │   └── types.ts                # TypeScript interfaces and type definitions
-├── legacy/                     # Archived legacy static HTML/JS/CSS files (reference)
 ├── public/
 │   ├── assets/                 # High-res portraits, company logos, resume PDF
 │   ├── apple-touch-icon.png    # iOS touch icon

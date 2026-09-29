@@ -68,7 +68,8 @@ export interface ProjectDetail {
 }
 
 export interface LeadershipItem {
-  img: string;
+  icon?: "alignment" | "process" | "mentorship" | "scale";
+  img?: string;
   t: string;
   d: string;
 }
@@ -78,7 +79,7 @@ export interface TestimonialItem {
   n: string;
   r: string;
   i: string;
-  avatar: string;
+  avatar?: string;
 }
 
 export interface ExperimentItem {

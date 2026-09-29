@@ -16,14 +16,18 @@ export default function SafeImage({
 }: SafeImageProps) {
   const [error, setError] = useState(false);
 
-  if (error && fallbackText) {
+  if ((!src || error) && fallbackText) {
     return <span className="avatar-fallback">{fallbackText}</span>;
+  }
+
+  if (!src && !fallbackSrc) {
+    return null;
   }
 
   return (
     <img
       {...props}
-      src={error && fallbackSrc ? fallbackSrc : src}
+      src={error && fallbackSrc ? fallbackSrc : (src || fallbackSrc)}
       alt={alt}
       onError={() => setError(true)}
     />

@@ -26,7 +26,6 @@ export default function BackToTopFloat() {
       aria-label="Back to top"
       title="Back to top"
       onClick={scrollToTop}
-      style={{ display: visible ? "inline-flex" : "none", alignItems: "center", justifyContent: "center" }}
     >
       <ArrowUp size={20} strokeWidth={2.5} />
     </button>

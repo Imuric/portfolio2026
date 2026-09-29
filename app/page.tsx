@@ -1,3 +1,4 @@
+import { Users, Layers, Compass, Rocket } from "lucide-react";
 import { PROJECTS, LEADERS, TESTIMONIALS } from "@/data";
 import {
   ProjectCard,
@@ -7,6 +8,13 @@ import {
   SectionHead,
   SkillsMarquee,
 } from "@/components";
+
+const LEADER_ICONS = {
+  alignment: Users,
+  process: Layers,
+  mentorship: Compass,
+  scale: Rocket,
+} as const;
 
 export default function HomePage() {
   const SHOW_PROJECTS = false;
@@ -148,23 +156,30 @@ export default function HomePage() {
             subtitle="How I drive clarity, scale design systems, and elevate teams while staying close to the craft."
           />
           <div className="row leader-grid align-items-start" id="leaderGrid" style={{ columnGap: 0 }}>
-            {LEADERS.map((leader, index) => (
-              <div key={index} className="col-md-6">
-                <div className="leader-card h-100">
-                  <div className="leader-ic">
-                    <SafeImage
-                      src={leader.img}
-                      alt=""
-                      fallbackSrc="https://via.placeholder.com/48"
-                    />
-                  </div>
-                  <div className="leader-body">
-                    <h3>{leader.t}</h3>
-                    <p>{leader.d}</p>
+            {LEADERS.map((leader, index) => {
+              const IconComponent = leader.icon ? LEADER_ICONS[leader.icon] : null;
+              return (
+                <div key={index} className="col-md-6">
+                  <div className="leader-card h-100">
+                    <div className="leader-ic" style={{ color: "var(--accent)" }}>
+                      {IconComponent ? (
+                        <IconComponent size={40} strokeWidth={1.8} />
+                      ) : (
+                        <SafeImage
+                          src={leader.img}
+                          alt=""
+                          fallbackSrc="https://via.placeholder.com/48"
+                        />
+                      )}
+                    </div>
+                    <div className="leader-body">
+                      <h3>{leader.t}</h3>
+                      <p>{leader.d}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
