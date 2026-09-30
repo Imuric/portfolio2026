@@ -6,3 +6,5 @@ export * from "./testimonials";
 export * from "./experiments";
 export * from "./projects";
 export * from "./writings";
+export * from "./process";
+export * from "./beyond";

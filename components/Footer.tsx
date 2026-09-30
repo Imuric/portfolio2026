@@ -34,7 +34,7 @@ export default function Footer() {
                 />
                 <div>
                   <p className="me-name">Prathamesh Patil</p>
-                  <p className="me-role muted">UI UX Designer</p>
+                  <p className="me-role muted">Product Designer</p>
                 </div>
               </div>
               <div className="contact-block">

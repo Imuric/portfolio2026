@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Prathamesh Patil — UI UX Designer",
+  title: "Prathamesh Patil — Product Designer",
   description:
-    "A multidisciplinary UI/UX Designer with a background in Computer Science and an M.Des in Human-Computer Interaction, passionate about crafting intuitive and engaging digital experiences.",
+    "Prathamesh Patil - Product Designer | M.Des HCI | B.Tech CSE | Fintech & B2B Specialist | User-Centric Design Advocate",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },

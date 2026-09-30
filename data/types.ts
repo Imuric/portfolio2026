@@ -156,4 +156,21 @@ export interface WritingArticle {
   sections?: ArticleSection[];
 }
 
+export interface ProcessStep {
+  icon: string;
+  title: string;
+  description: string;
+}
 
+export interface ToolkitCategory {
+  category: string;
+  tools: string[];
+}
+
+export interface BeyondImageItem {
+  id: string;
+  src: string;
+  alt: string;
+  title: string;
+  tag?: string;
+}

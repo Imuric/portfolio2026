@@ -33,12 +33,12 @@ export default function HomePage() {
         <div className="container">
           <div className="row align-center">
             <div className="col-md-7 hero-copy">
-              <p className="eyebrow">Product Designer · Pune, India</p>
+              <p className="eyebrow">Pune, India</p>
               <h1 className="hero-title">
                 Hello, I&apos;m <span className="accent-underline">Prathamesh</span>
               </h1>
               <p className="hero-lede">
-                A multidisciplinary <strong>UI/UX Designer</strong> with a background in Computer Science and an M.Des in Human-Computer Interaction, passionate about crafting intuitive and engaging digital experiences.
+                Product Designer | M.Des HCI | B.Tech CSE | Fintech & B2B Specialist | User-Centric Design Advocate
               </p>
               <div className="reach-row">
                 <span className="muted">Reach out</span>
