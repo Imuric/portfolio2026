@@ -8,7 +8,7 @@ export const BRAND_LOGOS: BrandLogo[] = [
   { name: "DN Enterprises", src: "/assets/home/logos/logo-dn-enterprises.svg" },
   { name: "DSP Equip", src: "/assets/home/logos/logo-dsp-equip.svg" },
   { name: "Kunal Agrotech", src: "/assets/home/logos/logo-kunal-agrotech.svg" },
-  { name: "Blue Ozone Digitals", src: "/assets/home/logos/logo-blue-ozone-digitals.png" },
+  { name: "Blue Ozone Digitals", src: "/assets/home/logos/logo-blue-ozone-digitals.svg" },
   { name: "Veero India", src: "/assets/home/logos/logo-veero-india.svg" },
   { name: "Zahabi", src: "/assets/home/logos/logo-zahabi.svg" },
   { name: "Chipzway", src: "/assets/home/logos/logo-chipzway.svg" },
