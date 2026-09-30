@@ -1377,7 +1377,9 @@ body.modal-open {
 }
 
 .about-body p {
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .toolkit {
