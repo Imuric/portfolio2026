@@ -29,15 +29,38 @@ export const EXPERIMENTS: ExperimentItem[] = [
 
 export const VISUAL_SKETCHES: VisualSketchItem[] = [
   {
-    title: "Sketch 1",
-    img: "https://via.placeholder.com/300x380/E9EAEB/181D27?text=Sketch+A",
+    id: "visual-1",
+    title: "Abstract Forms & Fluid Dynamics",
+    img: "/assets/visual/visual-1.jpg",
+    alt: "Abstract 3D forms and digital fluid dynamics",
+    tag: "3D Motion",
   },
   {
-    title: "Sketch 2",
-    img: "https://via.placeholder.com/300x380/D5D7DA/181D27?text=Sketch+B",
+    id: "visual-2",
+    title: "Geometric Space & Spatial UI",
+    img: "/assets/visual/visual-2.jpg",
+    alt: "Geometric shapes and spatial layout study",
+    tag: "Generative",
   },
   {
-    title: "Sketch 3",
-    img: "https://via.placeholder.com/300x380/E9EAEB/181D27?text=Sketch+C",
+    id: "visual-3",
+    title: "Minimalist Light & Silhouette",
+    img: "/assets/visual/visual-3.jpg",
+    alt: "Minimalist dark silhouette and light play",
+    tag: "Minimalism",
+  },
+  {
+    id: "visual-4",
+    title: "Retro Hardware & Cyberpunk Interface",
+    img: "/assets/visual/visual-4.jpg",
+    alt: "Retro computer hardware and terminal design exploration",
+    tag: "Interface",
+  },
+  {
+    id: "visual-5",
+    title: "Chromatic Gradients & Color Studies",
+    img: "/assets/visual/visual-5.jpg",
+    alt: "Vibrant chromatic waves and atmospheric gradients",
+    tag: "Color Theory",
   },
 ];

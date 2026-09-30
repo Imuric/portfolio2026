@@ -7,6 +7,7 @@ import {
   LogosMarquee,
   SectionHead,
   SkillsMarquee,
+  StatsCounter,
 } from "@/components";
 
 const LEADER_ICONS = {
@@ -62,6 +63,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ───────── IMPACT STATS ───────── */}
+      <StatsCounter />
 
       {/* ───────── LOGOS (marquee) ───────── */}
       <LogosMarquee />

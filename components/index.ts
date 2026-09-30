@@ -9,4 +9,6 @@ export { default as BeyondSlider } from "./BeyondSlider";
 export { default as BackToTopFloat } from "./BackToTopFloat";
 export { default as SafeImage } from "./SafeImage";
 export { default as ScrollReveal } from "./ScrollReveal";
+export { default as VisualSlider } from "./VisualSlider";
+export { default as StatsCounter } from "./StatsCounter";
 export * from "./SocialIcons";

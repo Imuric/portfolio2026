@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
-import { EXPERIMENTS, VISUAL_SKETCHES } from "@/data";
-import { SafeImage, SectionHead } from "@/components";
+import { EXPERIMENTS } from "@/data";
+import { SafeImage, SectionHead, VisualSlider } from "@/components";
 
 export const metadata: Metadata = {
   title: "Experiments — Prathamesh Patil",
@@ -74,18 +74,7 @@ export default function ExperimentsPage() {
             title="Visual Designs"
             subtitle="Playing with forms, colors, and layouts outside of commercial constraints."
           />
-          <div className="image-grid">
-            {VISUAL_SKETCHES.map((sketch, idx) => (
-              <div key={idx} className="image-card">
-                <SafeImage
-                  src={sketch.img}
-                  alt={sketch.title}
-                  loading="lazy"
-                  fallbackSrc="https://via.placeholder.com/300x380/E9EAEB/181D27?text=Sketch"
-                />
-              </div>
-            ))}
-          </div>
+          <VisualSlider />
         </div>
       </section>
     </>

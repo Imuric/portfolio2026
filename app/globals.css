@@ -496,6 +496,125 @@ body.dark .btn-primary {
 }
 
 /* ========================================================
+   IMPACT STATS COUNTER (Home Page)
+   ======================================================== */
+.stats-section {
+  padding: 48px 0 56px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+}
+
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -16px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--line);
+}
+
+.stat-number-wrap {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: var(--head-font);
+  font-size: clamp(42px, 4.6vw, 62px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-suffix {
+  color: var(--accent);
+  font-weight: 800;
+  margin-left: 2px;
+  font-size: 0.82em;
+}
+
+.stat-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+  margin: 0 0 4px;
+}
+
+.stat-desc {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0;
+  max-width: 220px;
+}
+
+@media (max-width: 991px) {
+  .stats-section {
+    padding: 36px 0 44px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .stat-item:nth-child(1)::after {
+    display: block;
+    right: -12px;
+  }
+
+  .stat-item:nth-child(3)::after {
+    display: block;
+    right: -12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .stats-section {
+    padding: 28px 0 36px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .stat-item:nth-child(1)::after,
+  .stat-item:nth-child(3)::after {
+    display: none;
+  }
+
+  .stat-number-wrap {
+    font-size: 44px;
+  }
+
+  .stat-desc {
+    max-width: none;
+  }
+}
+
+/* ========================================================
    LOGOS (marquee)
    ======================================================== */
 .logos {

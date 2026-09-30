@@ -91,8 +91,11 @@ export interface ExperimentItem {
 }
 
 export interface VisualSketchItem {
+  id?: string;
   title: string;
   img: string;
+  alt?: string;
+  tag?: string;
 }
 
 export interface BrandLogo {
@@ -173,4 +176,11 @@ export interface BeyondImageItem {
   alt: string;
   title: string;
   tag?: string;
+}
+
+export interface StatItem {
+  value: number;
+  suffix: string;
+  label: string;
+  description?: string;
 }

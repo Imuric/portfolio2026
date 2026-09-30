@@ -8,3 +8,4 @@ export * from "./projects";
 export * from "./writings";
 export * from "./process";
 export * from "./beyond";
+export * from "./stats";
