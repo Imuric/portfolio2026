@@ -163,10 +163,13 @@ export interface ProcessStep {
   icon: string;
   title: string;
   description: string;
+  stepNumber?: string;
+  deliverables?: string[];
 }
 
 export interface ToolkitCategory {
   category: string;
+  icon?: string;
   tools: string[];
 }
 

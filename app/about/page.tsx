@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
-import { Target, Scale, Sparkles, PenTool, Rocket } from "lucide-react";
+import {
+  Target,
+  Scale,
+  Sparkles,
+  PenTool,
+  Rocket,
+  Brain,
+  Layout,
+  Users,
+  Code2,
+  Image as ImageIcon,
+  Workflow,
+  Wrench,
+} from "lucide-react";
 import {
   BeyondSlider,
   SafeImage,
@@ -15,6 +28,14 @@ const PROCESS_ICONS = {
   sparkles: Sparkles,
   penTool: PenTool,
   rocket: Rocket,
+} as const;
+
+const TOOLKIT_ICONS = {
+  brain: Brain,
+  layout: Layout,
+  users: Users,
+  code: Code2,
+  image: ImageIcon,
 } as const;
 
 export const metadata: Metadata = {
@@ -72,56 +93,84 @@ export default function AboutPage() {
       {/* ───────── LOGOS (marquee) ───────── */}
       <LogosMarquee className="reveal-on-scroll" />
 
-      {/* ───────── PROCESS & TOOLKIT ───────── */}
+      {/* ───────── DESIGN PROCESS ───────── */}
       <section className="section process-section reveal-on-scroll">
         <div className="container">
           <SectionHead
-            title="Design Process & Toolkit"
-            subtitle="Sharing perspectives on design thinking, process, and lessons from the field."
+            eyebrow="Methodology"
+            title="Design Process"
+            subtitle="A structured yet agile 5-step framework — moving from ambiguous problem spaces to validated, production-ready interfaces."
           />
-          <div className="process-card">
-            <div className="process-grid">
-              {/* Process Column */}
-              <div className="process-col">
-                <h3 className="process-col-title">Process</h3>
-                <div className="process-steps">
-                  {PROCESS_STEPS.map((step) => {
-                    const IconComponent =
-                      PROCESS_ICONS[step.icon as keyof typeof PROCESS_ICONS] ?? Target;
-                    return (
-                      <div key={step.title} className="process-step">
-                        <div className="process-step-icon" aria-hidden="true">
-                          <IconComponent size={18} strokeWidth={2} />
-                        </div>
-                        <div className="process-step-content">
-                          <h4 className="process-step-title">{step.title}</h4>
-                          <p className="process-step-desc">{step.description}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
 
-              {/* Tool Kit Column */}
-              <div className="toolkit-col">
-                <h3 className="process-col-title">Tool Kit</h3>
-                <div className="toolkit-groups">
-                  {TOOLKIT_CATEGORIES.map((cat) => (
-                    <div key={cat.category} className="toolkit-group">
-                      <h4 className="toolkit-group-label">{cat.category}</h4>
-                      <div className="toolkit-tags">
-                        {cat.tools.map((tool) => (
-                          <span key={tool} className="toolkit-tag">
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
+          <div className="process-flow-grid">
+            {PROCESS_STEPS.map((step) => {
+              const IconComponent =
+                PROCESS_ICONS[step.icon as keyof typeof PROCESS_ICONS] ?? Target;
+              return (
+                <div key={step.title} className="process-flow-card">
+                  <div className="process-card-header">
+                    <div className="process-card-icon-wrap" aria-hidden="true">
+                      <IconComponent size={20} strokeWidth={2.2} />
                     </div>
-                  ))}
+                    <span className="process-card-step-num">{step.stepNumber}</span>
+                  </div>
+
+                  <h3 className="process-card-title">{step.title}</h3>
+                  <p className="process-card-desc">{step.description}</p>
+
+                  {step.deliverables && (
+                    <div className="process-card-deliverables">
+                      {step.deliverables.map((item) => (
+                        <span key={item} className="process-card-tag">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── TOOLS I USE ───────── */}
+      <section className="section toolkit-section reveal-on-scroll">
+        <div className="container">
+          <SectionHead
+            eyebrow="Ecosystem & Stack"
+            title="Tools I Use"
+            subtitle="The daily drivers, prototyping environments, and design system frameworks I rely on to ship high-impact digital products."
+          />
+
+          <div className="tools-grid">
+            {TOOLKIT_CATEGORIES.map((cat) => {
+              const CatIcon =
+                TOOLKIT_ICONS[cat.icon as keyof typeof TOOLKIT_ICONS] ?? Wrench;
+              return (
+                <div key={cat.category} className="tools-category-card">
+                  <div className="tools-category-header">
+                    <div className="tools-category-icon" aria-hidden="true">
+                      <CatIcon size={18} strokeWidth={2} />
+                    </div>
+                    <div className="tools-category-info">
+                      <h3 className="tools-category-title">{cat.category}</h3>
+                      <span className="tools-category-count">
+                        {cat.tools.length} {cat.tools.length === 1 ? "tool" : "tools"}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="tools-pills-wrap">
+                    {cat.tools.map((tool) => (
+                      <span key={tool} className="tools-pill">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
