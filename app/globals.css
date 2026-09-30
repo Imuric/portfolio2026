@@ -546,15 +546,13 @@ body.dark .btn-primary {
   width: auto;
   max-width: 160px;
   object-fit: contain;
-  opacity: .72;
-  filter: grayscale(1);
-  transition: .3s ease;
+  opacity: 1;
+  transition: transform .25s ease, opacity .25s ease;
   flex: 0 0 auto;
 }
 
 .logo-img:hover {
-  opacity: 1;
-  filter: grayscale(0);
+  transform: scale(1.05);
 }
 
 @keyframes logo-scroll {
