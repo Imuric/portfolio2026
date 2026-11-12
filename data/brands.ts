@@ -30,6 +30,7 @@ export const BRAND_LOGOS: BrandLogo[] = [
   { name: "Siddhanath Piyush Deshmukh", src: "/assets/home/logos/logo-siddhanath-piyush-deshmukh.svg" },
   { name: "Tejas International Pvt. Ltd", src: "/assets/home/logos/logo-tejas-international.svg" },
   { name: "TPG", src: "/assets/home/logos/logo-tpg.svg" },
+  { name: "Urban Commute", src: "/assets/home/logos/logo-urban-commute.svg" },
   { name: "Veero India", src: "/assets/home/logos/logo-veero-india.svg" },
   { name: "VP Cutting Edge Technology", src: "/assets/home/logos/logo-vp-cutting-edge-technology.svg" },
   { name: "Wings44", src: "/assets/home/logos/logo-wings44.svg" },
