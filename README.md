@@ -26,7 +26,7 @@ This project is a modern, high-performance portfolio application designed to sho
 | **[React DOM](https://react.dev/)**                                                     | `^19.3.1` | React DOM renderer                                               |
 | **[TypeScript](https://www.typescriptlang.org/)**                                       | `^7.0.2`  | Strict type safety across data models and components             |
 | **[Lucide Icons](https://lucide.dev/)** (`lucide-react`)                                | `^1.79.0` | Clean, accessible vector UI icons                                |
-| **[Next Font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)** | Built-in  | Self-hosted fonts (`Bricolage Grotesque` & `Inter`) |
+| **[Next Font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)** | Built-in  | Google Fonts fetched at build time (`Bricolage Grotesque` & `Inter`) |
 | **[Cloudflare Workers](https://developers.cloudflare.com/workers/)**                    | Latest    | Edge hosting via Wrangler Static Assets                          |
 | **[pnpm](https://pnpm.io/)**                                                            | `^11.x`   | High-efficiency package manager                                  |
 
