@@ -21,12 +21,12 @@ This project is a modern, high-performance portfolio application designed to sho
 
 | Technology                                                                              | Version   | Purpose                                                          |
 | :-------------------------------------------------------------------------------------- | :-------- | :--------------------------------------------------------------- |
-| **[Next.js](https://nextjs.org/)** (App Router)                                         | `^16.3.6` | Modern React framework with full SSG pre-rendering               |
-| **[React](https://react.dev/)**                                                         | `^19.3.0` | Latest concurrent component-driven UI library                    |
-| **[React DOM](https://react.dev/)**                                                     | `^19.3.0` | React DOM renderer                                               |
-| **[TypeScript](https://www.typescriptlang.org/)**                                       | `^5.8.0`  | Strict type safety across data models and components             |
-| **[Lucide Icons](https://lucide.dev/)** (`lucide-react`)                                | `^1.47.0` | Clean, accessible vector UI icons                                |
-| **[Next Font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)** | Built-in  | Zero-layout-shift Google Fonts (`Bricolage Grotesque` & `Inter`) |
+| **[Next.js](https://nextjs.org/)** (App Router)                                         | `^16.4.6` | Modern React framework with full SSG pre-rendering               |
+| **[React](https://react.dev/)**                                                         | `^19.3.1` | Latest concurrent component-driven UI library                    |
+| **[React DOM](https://react.dev/)**                                                     | `^19.3.1` | React DOM renderer                                               |
+| **[TypeScript](https://www.typescriptlang.org/)**                                       | `^7.0.2`  | Strict type safety across data models and components             |
+| **[Lucide Icons](https://lucide.dev/)** (`lucide-react`)                                | `^1.79.0` | Clean, accessible vector UI icons                                |
+| **[Next Font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)** | Built-in  | Self-hosted fonts (`Bricolage Grotesque` & `Inter`) |
 | **[Cloudflare Workers](https://developers.cloudflare.com/workers/)**                    | Latest    | Edge hosting via Wrangler Static Assets                          |
 | **[pnpm](https://pnpm.io/)**                                                            | `^11.x`   | High-efficiency package manager                                  |
 
@@ -73,7 +73,7 @@ portfolio2026/
 ├── components/
 │   ├── index.ts                # Unified barrel export for all components
 │   ├── BackToTopFloat.tsx      # Floating scroll-to-top trigger button
-│   ├── BeyondSlider.tsx        # Interactive gallery slider for About page
+│   ├── GallerySlider.tsx      # Shared gallery for About and Experiments
 │   ├── Footer.tsx              # Footer with contact info and socials
 │   ├── Header.tsx              # Header nav with Resume and Writings redirects
 │   ├── LogosMarquee.tsx        # Reusable brand logos marquee (used in Home & About)
@@ -146,12 +146,12 @@ You can preview the generated `./out` static build using any static file server:
 npx serve out
 ```
 
-### 6. Lint Code
+### 6. Check TypeScript
 
-Runs ESLint to check for code quality and syntax issues:
+Generates Next.js route types and checks TypeScript:
 
 ```bash
-pnpm lint
+pnpm typecheck
 ```
 
 ---

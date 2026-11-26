@@ -18,7 +18,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -90,7 +90,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -131,7 +131,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -165,7 +165,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -197,7 +197,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -229,7 +229,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -257,7 +257,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -285,7 +285,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -313,7 +313,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -341,7 +341,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -368,7 +368,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -395,7 +395,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -423,7 +423,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -451,7 +451,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -478,7 +478,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -505,7 +505,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -533,7 +533,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {
@@ -560,7 +560,7 @@ export const ARTICLES: WritingArticle[] = [
     author: {
       name: "Prathamesh Patil",
       role: "Product Designer",
-      avatar: "/assets/home/hero-portrait.png",
+      avatar: "/assets/home/avatar.webp",
     },
     sections: [
       {

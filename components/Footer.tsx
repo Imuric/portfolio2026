@@ -27,10 +27,11 @@ export default function Footer() {
             <div className="col-md-6 footer-me">
               <div className="me-card">
                 <SafeImage
-                  src="/assets/home/hero-portrait.png"
+                  src="/assets/home/avatar.webp"
+                  loading="lazy"
                   alt="Prathamesh Patil"
                   className="me-avatar"
-                  fallbackSrc="https://via.placeholder.com/100"
+                  fallbackSrc="/assets/image-placeholder.webp"
                 />
                 <div>
                   <p className="me-name">Prathamesh Patil</p>

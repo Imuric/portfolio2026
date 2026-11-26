@@ -50,10 +50,11 @@ export default function HomePage() {
               <div className="photo-card">
                 <div className="photo-bg"></div>
                 <SafeImage
-                  src="/assets/home/hero-portrait.png"
+                  src="/assets/home/hero-portrait.webp"
+                  fetchPriority="high"
                   alt="Portrait of Prathamesh Patil"
                   className="photo"
-                  fallbackSrc="https://via.placeholder.com/400x533"
+                  fallbackSrc="/assets/image-placeholder.webp"
                 />
                 <div className="avail-chip">
                   <span className="dot"></span> Available for work
@@ -174,7 +175,7 @@ export default function HomePage() {
                         <SafeImage
                           src={leader.img}
                           alt=""
-                          fallbackSrc="https://via.placeholder.com/48"
+                          fallbackSrc="/assets/image-placeholder.webp"
                         />
                       )}
                     </div>

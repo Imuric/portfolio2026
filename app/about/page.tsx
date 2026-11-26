@@ -14,13 +14,13 @@ import {
   Wrench,
 } from "lucide-react";
 import {
-  BeyondSlider,
+  GallerySlider,
   SafeImage,
   LogosMarquee,
   SectionHead,
   InstagramIcon,
 } from "@/components";
-import { SOCIAL_LINKS, PROCESS_STEPS, TOOLKIT_CATEGORIES } from "@/data";
+import { BEYOND_IMAGES, SOCIAL_LINKS, PROCESS_STEPS, TOOLKIT_CATEGORIES } from "@/data";
 
 const PROCESS_ICONS = {
   target: Target,
@@ -56,9 +56,9 @@ export default function AboutPage() {
             <div className="col-md-5">
               <div className="about-photo">
                 <SafeImage
-                  src="/assets/home/hero-portrait.png"
+                  src="/assets/home/hero-portrait.webp"
                   alt="Prathamesh Patil"
-                  fallbackSrc="https://via.placeholder.com/400x533"
+                  fallbackSrc="/assets/image-placeholder.webp"
                 />
               </div>
             </div>
@@ -188,7 +188,13 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <BeyondSlider />
+          <GallerySlider
+            items={BEYOND_IMAGES}
+            galleryLabel="Beyond work photo gallery"
+            previousLabel="Previous photo"
+            nextLabel="Next photo"
+            sectionsLabel="Gallery sections"
+          />
 
           <a
             href={instagramUrl}

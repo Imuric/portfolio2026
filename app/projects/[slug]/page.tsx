@@ -87,7 +87,7 @@ export default async function ProjectPage({ params }: Props) {
             src={project.img}
             alt={`${project.title} Cover`}
             className="cs-cover-img"
-            fallbackSrc="https://via.placeholder.com/1140x600"
+            fallbackSrc="/assets/image-placeholder.webp"
           />
         </div>
       </section>
@@ -139,7 +139,7 @@ export default async function ProjectPage({ params }: Props) {
                   <SafeImage
                     src={feat.img}
                     alt={feat.title}
-                    fallbackSrc="https://via.placeholder.com/720x500"
+                    fallbackSrc="/assets/image-placeholder.webp"
                   />
                 </div>
               </div>

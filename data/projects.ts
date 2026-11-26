@@ -44,7 +44,7 @@ export const PROJECTS: ProjectDetail[] = [
           "Real-time asset allocation tracking",
           "Shared family access for transparency",
         ],
-        img: "https://via.placeholder.com/720x500",
+        img: "/assets/image-placeholder.webp",
       },
       {
         title: "Goal-Based Planning",
@@ -54,7 +54,7 @@ export const PROJECTS: ProjectDetail[] = [
           "Risk-adjusted recommendations",
           "Automated monthly contributions",
         ],
-        img: "https://via.placeholder.com/720x500",
+        img: "/assets/image-placeholder.webp",
         imgLeft: true,
       },
     ],
@@ -131,7 +131,7 @@ export const PROJECTS: ProjectDetail[] = [
           "Bulk image processing",
           "Inventory sync",
         ],
-        img: "https://via.placeholder.com/720x500",
+        img: "/assets/image-placeholder.webp",
       },
     ],
     impactOutcomes: {
@@ -206,7 +206,7 @@ export const PROJECTS: ProjectDetail[] = [
           "Bottom-aligned actions",
           "High-contrast visuals",
         ],
-        img: "https://via.placeholder.com/720x500",
+        img: "/assets/image-placeholder.webp",
       },
     ],
     impactOutcomes: {
@@ -276,7 +276,7 @@ export const PROJECTS: ProjectDetail[] = [
           "Real-time order status",
           "Simplified financial reconciliation",
         ],
-        img: "https://via.placeholder.com/720x500",
+        img: "/assets/image-placeholder.webp",
       },
     ],
     impactOutcomes: {

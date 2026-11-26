@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
-import { EXPERIMENTS } from "@/data";
-import { SafeImage, SectionHead, VisualSlider } from "@/components";
+import { EXPERIMENTS, VISUAL_SKETCHES } from "@/data";
+import { GallerySlider, SafeImage, SectionHead } from "@/components";
 
 export const metadata: Metadata = {
   title: "Experiments — Prathamesh Patil",
@@ -32,12 +32,16 @@ export default function ExperimentsPage() {
                     rel={isExternal ? "noopener noreferrer" : undefined}
                     className="exp-thumb"
                   >
-                    <SafeImage
-                      src={exp.img}
-                      alt={exp.title}
-                      loading="lazy"
-                      fallbackSrc="https://via.placeholder.com/600x340/181D27/FFFFFF?text=Relaysis.com"
-                    />
+                    {exp.img ? (
+                      <SafeImage
+                        src={exp.img}
+                        alt={exp.title}
+                        loading="lazy"
+                        fallbackSrc="/assets/image-placeholder.webp"
+                      />
+                    ) : (
+                      <span className="exp-thumb-title">{exp.title}</span>
+                    )}
                   </a>
                   <div className="exp-body">
                     <h3>
@@ -74,7 +78,19 @@ export default function ExperimentsPage() {
             title="Visual Designs"
             subtitle="Playing with forms, colors, and layouts outside of commercial constraints."
           />
-          <VisualSlider />
+          <GallerySlider
+            items={VISUAL_SKETCHES.map((sketch, index) => ({
+              id: sketch.id || String(index),
+              src: sketch.img,
+              alt: sketch.alt || sketch.title,
+              title: sketch.title,
+              tag: sketch.tag,
+            }))}
+            galleryLabel="Visual designs gallery"
+            previousLabel="Previous visual design"
+            nextLabel="Next visual design"
+            sectionsLabel="Visual design sections"
+          />
         </div>
       </section>
     </>

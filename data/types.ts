@@ -85,7 +85,7 @@ export interface TestimonialItem {
 export interface ExperimentItem {
   title: string;
   desc: string;
-  img: string;
+  img?: string;
   linkText: string;
   linkHref: string;
 }

@@ -2,12 +2,26 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { BEYOND_IMAGES } from "@/data";
+import type { BeyondImageItem } from "@/data/types";
 
 const TOTAL_DOTS = 3;
 const AUTO_SCROLL_DELAY = 3800; // 3.8 seconds
 
-export default function BeyondSlider() {
+interface GallerySliderProps {
+  items: BeyondImageItem[];
+  galleryLabel: string;
+  previousLabel: string;
+  nextLabel: string;
+  sectionsLabel: string;
+}
+
+export default function GallerySlider({
+  items,
+  galleryLabel,
+  previousLabel,
+  nextLabel,
+  sectionsLabel,
+}: GallerySliderProps) {
   const gridRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -123,7 +137,7 @@ export default function BeyondSlider() {
       >
         <button
           className="beyond-nav prev"
-          aria-label="Previous photo"
+          aria-label={previousLabel}
           onClick={handlePrev}
           type="button"
         >
@@ -134,9 +148,9 @@ export default function BeyondSlider() {
           className="beyond-grid"
           ref={gridRef}
           tabIndex={0}
-          aria-label="Beyond work photo gallery"
+          aria-label={galleryLabel}
         >
-          {BEYOND_IMAGES.map((img) => (
+          {items.map((img) => (
             <div key={img.id} className="beyond-item">
               <img src={img.src} alt={img.alt} loading="lazy" />
               <div className="beyond-item-overlay">
@@ -149,7 +163,7 @@ export default function BeyondSlider() {
 
         <button
           className="beyond-nav next"
-          aria-label="Next photo"
+          aria-label={nextLabel}
           onClick={handleNext}
           type="button"
         >
@@ -157,7 +171,7 @@ export default function BeyondSlider() {
         </button>
       </div>
 
-      <div className="beyond-dots" role="tablist" aria-label="Gallery sections">
+      <div className="beyond-dots" role="tablist" aria-label={sectionsLabel}>
         {Array.from({ length: TOTAL_DOTS }).map((_, idx) => (
           <button
             key={idx}

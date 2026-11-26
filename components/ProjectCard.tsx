@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ProjectDetail } from "@/data/types";
@@ -21,7 +19,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           src={project.img}
           alt={project.title}
           loading="lazy"
-          fallbackSrc="https://via.placeholder.com/600x400"
+          fallbackSrc="/assets/image-placeholder.webp"
         />
       </Link>
       <div className="work-body">

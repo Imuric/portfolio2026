@@ -182,7 +182,7 @@ export default function WritingsFeed({ articles }: WritingsFeedProps) {
             const author = article.author ?? {
               name: "Prathamesh Patil",
               role: "Product Designer",
-              avatar: "/assets/home/hero-portrait.png",
+              avatar: "/assets/home/avatar.webp",
             };
 
             const primaryTag = article.tags?.[0];

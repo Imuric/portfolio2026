@@ -40,7 +40,7 @@ export default async function ArticlePage({ params }: Props) {
   const author = article.author ?? {
     name: "Prathamesh Patil",
     role: "UI/UX Designer",
-    avatar: "/assets/home/hero-portrait.png",
+    avatar: "/assets/home/avatar.webp",
   };
 
   return (
@@ -161,7 +161,7 @@ export default async function ArticlePage({ params }: Props) {
                     src={section.image.src}
                     alt={section.image.alt || ""}
                     className="article-media-img"
-                    fallbackSrc="https://via.placeholder.com/740x400"
+                    fallbackSrc="/assets/image-placeholder.webp"
                   />
                   {section.image.isGif && (
                     <span className="article-gif-badge">GIF</span>
@@ -215,7 +215,7 @@ export default async function ArticlePage({ params }: Props) {
       {/* ── Author Bio Footer Card ── */}
       <footer className="article-author-card">
         <SafeImage
-          src="/assets/home/hero-portrait.png"
+          src="/assets/home/avatar.webp"
           alt="Prathamesh Patil"
           className="article-author-card-avatar"
           fallbackText="P"

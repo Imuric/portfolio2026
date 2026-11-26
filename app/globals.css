@@ -2055,6 +2055,17 @@ body.modal-open {
   display: block;
 }
 
+.exp-thumb-title {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--head-font);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 700;
+}
+
 .exp-body {
   display: flex;
   flex-direction: column;
